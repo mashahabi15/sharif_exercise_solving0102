@@ -28,6 +28,8 @@ comment2
 #
 
 my_uni = "SharifUniversity"  # ششمین خانه = ایندکس پنج
+
+
 # print(f"Last char: {my_uni[15]} *** {my_uni[-1]}")  # reverse indexing
 #
 # print(my_uni[0:6])  # slicing
@@ -175,7 +177,7 @@ my_uni = "SharifUniversity"  # ششمین خانه = ایندکس پنج
 
 # if  "b" in "Sharif":
 #     print("Yes!")
-furniture = ['table', 'chair', 'rack', 'shelf']  # zero-based string
+# furniture = ['table', 'chair', 'rack', 'shelf']  # zero-based string
 
 #
 # table, chair, rack, shelf = furniture  # multiple assignment
@@ -188,7 +190,7 @@ furniture = ['table', 'chair', 'rack', 'shelf']  # zero-based string
 # print(furniture)
 # furniture.pop()  # will remove and return the last item of the list. You can also pass the index of the element as an optional parameter
 # print(furniture)
-numbers = [2, 5, 3.14, 1, -7]
+# numbers = [2, 5, 3.14, 1, -7]
 # numbers.sort()  # sort -> ascending صعودی, descending نزولی
 # print(numbers)
 # numbers.sort(reverse=True)
@@ -206,11 +208,11 @@ numbers = [2, 5, 3.14, 1, -7]
 # print(len(furniture))
 #
 # ### Dictionary
-my_cat = {
-    'size': 'fat',
-    'color': 'gray',
-    'disposition': 'loud',
-}
+# my_cat = {
+#     'size': 'fat',
+#     'color': 'gray',
+#     'disposition': 'loud',
+# }
 # print(my_cat.get('height'))
 # print(my_cat['height'])
 # car_info_list = ["red", 2020, "Benz"]
@@ -324,3 +326,201 @@ my_cat = {
 
 # print(list(map(int, ['2', '5', '17'])))
 
+# my_input = input()  # 5 7 10 4 19 25 46
+#
+# number_list = list(map(int, my_input.split(' ')))
+#
+# for item in number_list:
+#     if item % 5 == 0:
+#         print(item)
+
+# my_input = input()  # 5 7 10 4 19 25 46
+#
+# number_list = list(map(int, my_input.split(' ')))
+#
+# even_count = 0
+#
+# for item in number_list:
+#     if item % 2 == 0:
+#         even_count = even_count + 1  # event_count += 1
+#
+# print(even_count)
+
+# x = input() # 5 7 10 4 19 25 46 => [5,7,10,4,19,25,46]
+# # print(x.split(' '))
+# my_list = [] # list()
+#
+# for item in x.split(' '):
+#     my_list.append(int(item))
+#
+# print(my_list)
+
+
+# my_list = []
+# for i in range(5):
+#     number = int(input())
+#     my_list.append(number)
+
+# print('I am Maedeh. I am graduated.'.split(','))
+
+# list, tuple, set, dict, string, ...
+#
+# a = [8, 7]
+# b = [8, 7]
+# print(a == b)
+# a[0]
+# a = {
+#     1: 2,
+#     3: 4,
+# }
+# b = {
+#     3: 4,
+#     1: 2,
+# }
+# print(a == b)
+
+# mutable / immutable
+# 1. int, string, tuple, ...
+# my_str1 = "Sharif1"
+# my_str2 = my_str1
+# my_str2 = "Sharif2"
+# print(my_str1)
+
+
+# 2. list, dict, set,...
+# a = [2, 5]
+# b = a.copy()  # call by reference
+# b[0] = 4  # b= [4, 5]
+# print(a)
+
+# 3.
+# a = [2, 5]
+# b = a.copy()
+# b[0] = 4  # b= [4, 5]
+# print(a)
+
+# x = input() # 5 7 10 4 19 25 46 => [5,7,10,4,19,25,46]
+# my_list = list(map(int, x.split(' ')))
+# list_sum = 0
+#
+# for item in my_list:
+#     list_sum = list_sum + item # list_sum += item
+#
+# print(list_sum)
+
+
+# my_set = set()
+# my_set.add(5)
+# my_set.add(10) # my_set = {5, 10}
+# my_set.add(10)
+# my_list = [5, 10, 10]
+# # print(f"set: {my_set}, list: {my_list}")
+# print(sorted(my_set))
+
+# list1 = [10, 10, 10, 4, 4, 7, 8]
+# list2 = [] # [10,4,7,8]
+#
+# for item in list1:
+#     if item not in list2:
+#         list2.append(item)
+# print(list2)
+#
+# print(list(set(list1)))
+
+
+# n=10 -> 1+2+3+...+10
+
+# n = int(input("Enter a number:\t"))
+# numbers_sum = 0
+#
+# for i in range(1, n+1):
+#     numbers_sum = numbers_sum+ i
+#
+# print(numbers_sum)
+
+# Trace, Debug
+
+# n! = 1 * 2 * 3 * ... * n
+# n = int(input())  # 5! = 1 * 2 * 3 * 4 * 5
+# factoriel = 1
+#
+# for i in range(1, n + 1):
+#     factoriel = factoriel * i  # factorial *= i
+#
+# print(factoriel)
+
+# n = int(input()) # 15 => 1,3,5,15 => 4
+# # n => 1 <= i <= n and n % i == 0
+# for i in range(1, n+1):
+#     if n % i == 0:
+#         print(i)
+
+# for i in range(1, 101):
+#     # if i == 43 or i == 87 or i == 94:
+#     #     continue
+#
+#     # if i in [43, 87, 94]:
+#     #     continue
+#
+#     if i not in [43, 87, 94]:
+#         print(i)
+
+# for i in range(1, 101):
+#     print(i)
+
+# while condition:
+#     statement ...
+
+# i = 1
+#
+# while i <= 100:
+#     print(i)
+#     i = i + 1
+#
+# num = int(input())
+#
+# while num != -1:
+#     print(num)
+#     num = int(input())
+
+
+# function => input? operation? output?(return value)
+# def add_1_to_num(number):  # argument in signature
+#     # scope حوزه
+#     added_number = number + 1
+#     return added_number
+#
+#
+# for i in range(3):
+#     num = int(input())
+#     # num = num + 1
+#     num = add_1_to_num(num)
+#     print(num)
+#
+# age = int(input("Enter your age"))
+# # next_year_age = age + 1
+# next_year_age = add_1_to_num(age)
+# print(f"You'll be {next_year_age} years old by the next year!")
+
+
+def print_info(friend_name, friend_age):
+    print(f"Your friend is {friend_name} and he/she is {friend_age} years old.")
+
+
+for i in range(2):
+    name = input("Enter your name:\t")
+    age = int(input("Enter your age:\t"))
+    print_info(name, age)  # positional argument
+    print_info(friend_name=name, friend_age=age)  # keyword argument
+    # print_info(friend_age=age, friend_name=name) # keyword argument
+
+# def print_info():
+#     for i in range(2):
+#         name = input("Enter your name:\t")
+#         age = int(input("Enter your age:\t"))
+#         print(f"Your friend is {name} and he/she is {age} years old.")
+#
+#
+# print_info()
+
+# todo default value, mutable/immutable in function
