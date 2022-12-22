@@ -29,7 +29,6 @@ comment2
 
 my_uni = "SharifUniversity"  # ششمین خانه = ایندکس پنج
 
-
 # print(f"Last char: {my_uni[15]} *** {my_uni[-1]}")  # reverse indexing
 #
 # print(my_uni[0:6])  # slicing
@@ -503,16 +502,16 @@ my_uni = "SharifUniversity"  # ششمین خانه = ایندکس پنج
 # print(f"You'll be {next_year_age} years old by the next year!")
 
 
-def print_info(friend_name, friend_age):
-    print(f"Your friend is {friend_name} and he/she is {friend_age} years old.")
-
-
-for i in range(2):
-    name = input("Enter your name:\t")
-    age = int(input("Enter your age:\t"))
-    print_info(name, age)  # positional argument
-    print_info(friend_name=name, friend_age=age)  # keyword argument
-    # print_info(friend_age=age, friend_name=name) # keyword argument
+# def print_info(friend_name, friend_age):
+#     print(f"Your friend is {friend_name} and he/she is {friend_age} years old.")
+#
+#
+# for i in range(2):
+#     name = input("Enter your name:\t")
+#     age = int(input("Enter your age:\t"))
+#     print_info(name, age)  # positional argument
+#     print_info(friend_name=name, friend_age=age)  # keyword argument
+#     # print_info(friend_age=age, friend_name=name) # keyword argument
 
 # def print_info():
 #     for i in range(2):
@@ -524,3 +523,239 @@ for i in range(2):
 # print_info()
 
 # todo default value, mutable/immutable in function
+
+# def summation(num1, num2=5):  # default value مقدار پیشفرض -> immutable
+#     sum_value = num1 + num2
+#     return sum_value
+#
+#
+# print(summation(num1=10))  # keyword argument
+
+# تابعی بنویسید که اسم یک شخص را دریافت میکند و به او سلام می‌کند. اگر اسمی به آن
+# پاس ندادیم hello world را چاپ کند
+# Hello Sara!
+
+# for i in [1,2,3,4,5]:
+#     print(i)
+
+
+# x, y = 1, 2  # unpacking
+#
+# my_dict = {
+#     0: "v0",
+#     1: "v1",
+#     2: "v2",
+# }
+# print(my_dict.items())
+
+
+# for k, v in my_dict.items():
+#     print(f'key={k} - value={v}')
+
+# for k in my_dict.keys():
+#     print(k)
+
+# for v in my_dict.values():
+#     print(v)
+
+# my_list = [(0, '0'), (1, '1'), (2, '2')]
+# a, b = (1, '1')
+
+# for i in my_list:
+#     indx0 = i[0]
+#     indx1 = i[1]
+#     print(f'{indx0} , {indx1}')
+
+# for indx0, indx1 in my_list:  # unpacking
+#     print(f'{indx0} , {indx1}')
+
+# 1
+# def add(x):
+#     x = x + 1
+#
+#
+# a = 2  # immutable
+# add(a)
+# print(a)
+
+
+# 2
+# def my_sort(x):
+#     x = x.sort()
+#
+#
+# a = [2, 1, 7, 3]  # mutable
+# my_sort(a)
+# print(a)
+
+# a = [7, 8, 4]
+# b = a
+# b = [1, 3, 2]
+# b = b.sort()
+# print(a)  # mutable
+
+
+# x = 20  # breakpoint
+# for i in range(100):
+#     x = x + 3
+#     print(x)
+# a = 5
+# print(x)
+
+# friends_file = open('friends.txt', 'w') # r/w/a/w+
+# friends_list = list()
+#
+# for i in range(2):
+#     friend_input = input("Please enter your friend name and age:\t") # Sara 24
+#     # friends_file.write(f'{friend_input}\n') # a string
+#     friends_list.append(f'{friend_input}\n')
+#
+# friends_file.writelines(friends_list) # a list of string
+# friends_file.close()
+#
+# read_friends_file = open('friends.txt', 'r')
+#
+# print(read_friends_file.read())
+#
+# read_friends_file.close()
+
+
+# todo check
+# friends_file = open('friends.txt', 'w+') # r/w/a/w+
+# friends_list = list()
+#
+# for i in range(2):
+#     friend_input = input("Please enter your friend name and age:\t") # Sara 24
+#     # friends_file.write(f'{friend_input}\n') # a string
+#     friends_list.append(f'{friend_input}\n')
+#
+# friends_file.writelines(friends_list) # a list of string
+#
+# print(friends_file.read())
+#
+# friends_file.close()
+
+
+# 1. scopes حوزه
+
+
+b = 1
+
+
+# def f1():
+#     a = 1
+#     print(b)
+#
+# f1()
+
+# nested function
+
+# def f1():  # enclosing function
+#     x = 1  # local variable
+#     print(z)
+#
+#     def f2():  # nested function
+#         y = 2  # local variable
+#         print(x)  # non-local variable
+#         print(z)
+#
+#     f2()
+#
+#
+# z = 3  # global variable
+# f1()
+
+# z = 3
+#
+#
+# def a():
+#     x = 1
+#
+#     def b():
+#         y = 2
+#         print(x, y, z)
+#
+#     b()
+#     print(x, z)  # print(x, y, z)
+#
+#
+# a()
+
+# 2. recursion(recursive function) تابع بازگشتی
+
+# def summation(n): # normal
+#     s = 0
+#     for i in range(1, n+1):
+#         s += i
+#
+#     return s
+#
+# print(summation(4))
+
+# def rec_summation(n):
+#     if n > 1:
+#         return n + rec_summation(n-1)
+#
+#     elif n == 1:
+#         return 1
+#
+# print(rec_summation(4))
+# sum(4) => 4 + sum(3) = 10
+# sum(3) => 3 + sum(2) = 6
+# sum(2) => 2 + sum(1) = 3
+# sum(1) = 1
+# heap, stack
+
+# def fact(n): # normal
+#     p = 1
+#     for i in range(1, n+1):
+#         p *= i
+#
+#     return p
+#
+# print(fact(5))
+
+# recursive
+
+# def fact(n):
+#     if n == 1:
+#         return 1
+#
+#     return n * fact(n-1)
+# print(fact(5))
+# fact(5) = 5 * fact(4) => 4 * fact(3) => 3 * fact(2) => 2 * fact(1) => 2 * 1
+
+
+s = 0
+for i in range(3):
+    s += i # s = s + i
+
+print(s)
+
+
+
+
+
+
+
+
+
+
+# 3. lambda
+# a = lambda x: x * 2
+# print(a(5))
+
+# 4. map map(function, iterable) ->  returns a map object(which is an iterator)
+
+# 5. filter filter(function, iterable) -> iterator
+# ages = [5, 12, 17, 18, 24, 32]
+#
+# def myFunc(x):
+#   if x < 18:
+#     return False
+#   else:
+#     return True
+#
+# adults = filter(myFunc, ages)
+
+# print(list(filter(lambda x: x < 0, range(-5, 5))))
