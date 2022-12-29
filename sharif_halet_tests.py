@@ -726,26 +726,87 @@ b = 1
 # fact(5) = 5 * fact(4) => 4 * fact(3) => 3 * fact(2) => 2 * fact(1) => 2 * 1
 
 
-s = 0
-for i in range(3):
-    s += i # s = s + i
+# s = 0
+# for i in range(3):
+#     s += i  # s = s + i
+#
+# print(s)
 
-print(s)
-
-
-
-
-
+# 3. lambda -> Anonymous function فانکشن پنهانی
+# lambda arguments: expression
 
 
+# Write a function to input a number and double it and return the result.
 
+# def double(num):
+#     return num * 2
+#
+# print(f'Normal func: {double(10)}')
+# double2 = lambda num: num * 2 # assign it to a variable
+# print(f'Lambda function: {(double2(10))}')
 
+# Write a program that gives a triangle size and calculates its p
+# lambda
 
-# 3. lambda
+# a, b, c = list(map(int, input().split(' ')))
+# p = lambda x, y, z: x + y + z
+# print(p(x=a, y=b, z=c))
+
 # a = lambda x: x * 2
 # print(a(5))
 
 # 4. map map(function, iterable) ->  returns a map object(which is an iterator)
+
+# str_list = ['1', '4', '30']
+# # Write a code to convert this list to a list of integers
+# int_list = list()
+# for i in str_list:
+#     int_list.append(int(i))
+# print(f'Normal function: {int_list}')
+#
+# int_list2 = list(map(int, str_list))
+# print(int_list2)
+# print(f'With Map: {int_list2}')
+
+# initial_list = [8, 10, 25]
+# print(list(map(lambda x: x * 2, initial_list)))
+#
+# # Write a program to exponential a list item to power of 3 -> map && lambda
+# print(list(map(lambda x: x ** 3, initial_list)))
+
+
+# Write a function that checks if a number if negative or positive (False/True)
+def check_pos_neg(num):
+    if num > 0:
+        return True
+    else:
+        return False
+
+
+initial_list = [-10, 6, 8, -3, 47, 1, -6]  # -> [6,8,47,1]
+# final_list = list()
+# for i in initial_list:
+#     if check_pos_neg(i) is True:
+#         final_list.append(i)
+#
+# print(final_list)
+
+# print(list(filter(check_pos_neg, initial_list)))
+
+# Write a program to input 3 ages and print ages above 18. => filter
+
+# a = [17, 19, 20]
+# above_18 = list()
+#
+#
+# def check_legal_age(age):
+#     if age >= 18:
+#         return True
+#     else:
+#         return False
+#
+#
+# print(list(filter(check_legal_age, a)))  # print(list(filter(lambda x : x >= 0, a)))
 
 # 5. filter filter(function, iterable) -> iterator
 # ages = [5, 12, 17, 18, 24, 32]
@@ -759,3 +820,24 @@ print(s)
 # adults = filter(myFunc, ages)
 
 # print(list(filter(lambda x: x < 0, range(-5, 5))))
+
+
+# Write a program to check if a string starts with Hi and ends with bye
+import re
+
+# my_regex = '^Hi.*Bye$' # Hi utdcghj gjhb Bye
+# txt = 'Hi Maryam how are you Bye'
+# is_valid = re.search(pattern=my_regex, string=txt)
+# if is_valid:
+#     print('Valid txt')
+# else:
+#     print("Invalid txt")
+
+# check if a string has 'Sharif' in
+
+my_regex = '.*sharif.*'
+txt = """
+hi how are you sharif\nMy university is sharif\nI study in sharif
+"""
+print(re.search(my_regex, txt))
+print(re.findall(my_regex, txt))
